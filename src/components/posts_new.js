@@ -4,8 +4,11 @@ import {Field, reduxForm} from 'redux-form';
 
 class PostsNew extends Component {
     renderField(field) {
+
+        const className = `form-group ${field.meta.touched && field.meta.error ? 'has-danger' : ''}`
+
        return(
-        <div className="form-group">
+        <div className= {className}>
             <label> {field.label}</label>
             <input
             className="form-control"
@@ -17,7 +20,10 @@ class PostsNew extends Component {
             /// for the above syntax
                 {...field.input}
             />
+            <div className="text-help">
+
             {field.meta.touched ? field.meta.error:''}
+            </div>
         </div>
        );
     }
