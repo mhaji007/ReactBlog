@@ -17,14 +17,14 @@ class PostsNew extends Component {
             /// for the above syntax
                 {...field.input}
             />
-            {field.meta.error}
+            {field.meta.touched ? field.meta.error:''}
         </div>
        );
     }
 
 
     onSubmit(values) {
-        
+
     }
 
     render() { 
