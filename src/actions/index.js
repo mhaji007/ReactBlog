@@ -36,4 +36,4 @@ export function fetchPost(id) {
         type: FETCH_POST,
         payload: request
     }
-}
+} 
